@@ -1,0 +1,49 @@
+﻿@page
+@model Client.Pages.FeedModel
+@{
+    ViewData["Title"] = "Feed";
+}
+
+<h1>Feed</h1>
+
+<!-- New Blab -->
+<div>
+    <div class="card" style="width: 100%">
+        <div class="card-body">
+            <form method="POST">
+                <!-- Content input -->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Content</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                        asp-for="Content"></textarea>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example5">Username</label>
+                    <input type="text" id="form3Example5" class="form-control" asp-for="Username" />
+                </div>
+
+                <br>
+                <!-- Submit button -->
+                <input type="submit" class="btn btn-primary btn-block mb-4"></input>
+
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+<!-- Blabs Feed -->
+@foreach (var b in Model.Blabs)
+{
+    <div>
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Blabed By @Html.DisplayFor(modelItem => b.Username)</h5>
+                <p class="card-text">
+                    @Html.DisplayFor(modelItem => b.Content)
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+}

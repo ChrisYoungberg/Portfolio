@@ -1,0 +1,24 @@
+@page
+@model Client.Pages.UsersModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1>Users</h1>
+<!-- Blabs Feed -->
+@foreach (var u in Model.Users)
+{
+    <div>
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => u.Username)</h5>
+                <p class="card-text">
+                    @Html.DisplayFor(modelItem => u.FullNameFirstLast)<br>
+                    @Html.DisplayFor(modelItem => u.Email.Address)
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+}
+
