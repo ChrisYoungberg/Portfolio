@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Company Game</title>
+{% endblock%}
+
+{% block body %}
+<div class="container body">
+    <h1>Company Game</h1>
+
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=""></a>
+            <a class="navbar-brand btn btn-secondary" href="{% url 'nextDay' %}">Next Day</a>
+            <div class="navbar-brand">
+                {% if a.incomeforday > 1000 or a.prestige > 0 %}
+                <a class="btn btn-secondary" href="{% url 'prestigeQuestion' %}">Prestige</a>
+                {% endif %}
+                {% if a.prestige > 0 %}
+                <a class="btn btn-secondary" href="{% url 'prestigeBuy' %}">Spend Prestige</a>
+                {% endif %}
+            </div>
+            <a class="navbar-brand" href=""></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-light sticky-top bg-light">
+        <div class="container-fluid">
+            <span class="navbar-text">Playing as: {{ a.user.username }}</span>
+            <span class="navbar-text">Money: ${{ a.money }}</span>
+            {% if a.prestigeBonus > .01 %}
+            <span class="navbar-text">Income for Day: ${{ a.incomeforday }} X{{ a.prestigeBonus }}</span>
+            {% else %}
+            <span class="navbar-text">Income for Day: ${{ a.incomeforday }}</span>
+            {% endif %}
+            <span class="navbar-text">Prestige Points: {{ a.prestige }}</span>
+        </div>
+    </nav>
+
+    <br>
+    <table class="table">
+        <tbody>
+            {% for c in cs %}
+            <tr class="table-primary">
+                <th scope="row" rowspan="2"><img src="{{ c.image.url }}" height="100px"></th>
+                <td>{{ c.name }}</td>
+                {% if c.name == 'Taco Bell' %}
+                <td>Owned: {{ a.comp1 }}</td>
+                <td>Cost: ${{ cost.0 }}</td>
+                <td>Pay: ${{ pay.0 }}</td>
+                {% endif %}
+                {% if c.name == "Chick-fil-A" %}
+                <td>Owned: {{ a.comp2 }}</td>
+                <td>Cost: ${{ cost.1 }}</td>
+                <td>Pay: ${{ pay.1 }}</td>
+                {% endif %}
+                {% if c.name == "Pizza Hut" %}
+                <td>Owned: {{ a.comp3 }}</td>
+                <td>Cost: ${{ cost.2 }}</td>
+                <td>Pay: ${{ pay.2 }}</td>
+                {% endif %}
+                {% if c.name == "Arby's" %}
+                <td>Owned: {{ a.comp4 }}</td>
+                <td>Cost: ${{ cost.3 }}</td>
+                <td>Pay: ${{ pay.3 }}</td>
+                {% endif %}
+                {% if c.name == "Dunkin'" %}
+                <td>Owned: {{ a.comp5 }}</td>
+                <td>Cost: ${{ cost.4 }}</td>
+                <td>Pay: ${{ pay.4 }}</td>
+                {% endif %}
+                {% if c.name == "Cinnabon" %}
+                <td>Owned: {{ a.comp6 }}</td>
+                <td>Cost: ${{ cost.5 }}</td>
+                <td>Pay: ${{ pay.5 }}</td>
+                {% endif %}
+                {% if c.name == "Wendy's" %}
+                <td>Owned: {{ a.comp7 }}</td>
+                <td>Cost: ${{ cost.6 }}</td>
+                <td>Pay: ${{ pay.6 }}</td>
+                {% endif %}
+                {% if c.name == "Krispy Kreme" %}
+                <td>Owned: {{ a.comp8 }}</td>
+                <td>Cost: ${{ cost.7 }}</td>
+                <td>Pay: ${{ pay.7 }}</td>
+                {% endif %}
+                {% if c.name == "Baskin-Robbins" %}
+                <td>Owned: {{ a.comp9 }}</td>
+                <td>Cost: ${{ cost.8 }}</td>
+                <td>Pay: ${{ pay.8 }}</td>
+                {% endif %}
+                {% if c.name == "Dairy Queen" %}
+                <td>Owned: {{ a.comp10 }}</td>
+                <td>Cost: ${{ cost.9 }}</td>
+                <td>Pay: ${{ pay.9 }}</td>
+                {% endif %}
+                <td><a href="{% url 'company' ID=c.id %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr>
+                <td colspan="5" class="table-info">{{ c.desc }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

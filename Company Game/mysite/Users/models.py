@@ -1,0 +1,45 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+class Account(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    money = models.BigIntegerField(default=1000)
+    incomeforday = models.BigIntegerField(default=0)
+    prestige = models.IntegerField(default=0)
+    prestigeBonus = models.FloatField(default=0)
+    comp1 = models.IntegerField(default=0)
+    comp2 = models.IntegerField(default=0)
+    comp3 = models.IntegerField(default=0)
+    comp4 = models.IntegerField(default=0)
+    comp5 = models.IntegerField(default=0)
+    comp6 = models.IntegerField(default=0)
+    comp7 = models.IntegerField(default=0)
+    comp8 = models.IntegerField(default=0)
+    comp9 = models.IntegerField(default=0)
+    comp10 = models.IntegerField(default=0)
+    pallcost = models.IntegerField(default=0)
+    pcomp1cost = models.IntegerField(default=0)
+    pcomp2cost = models.IntegerField(default=0)
+    pcomp3cost = models.IntegerField(default=0)
+    pcomp4cost = models.IntegerField(default=0)
+    pcomp5cost = models.IntegerField(default=0)
+    pcomp6cost = models.IntegerField(default=0)
+    pcomp7cost = models.IntegerField(default=0)
+    pcomp8cost = models.IntegerField(default=0)
+    pcomp9cost = models.IntegerField(default=0)
+    pcomp10cost = models.IntegerField(default=0)
+    pallpay = models.IntegerField(default=0)
+    pcomp1pay = models.IntegerField(default=0)
+    pcomp2pay = models.IntegerField(default=0)
+    pcomp3pay = models.IntegerField(default=0)
+    pcomp4pay = models.IntegerField(default=0)
+    pcomp5pay = models.IntegerField(default=0)
+    pcomp6pay = models.IntegerField(default=0)
+    pcomp7pay = models.IntegerField(default=0)
+    pcomp8pay = models.IntegerField(default=0)
+    pcomp9pay = models.IntegerField(default=0)
+    pcomp10pay = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.user.username

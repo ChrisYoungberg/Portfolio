@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Spend Prestige</title>
+{% endblock%}
+
+{% block body %}
+<div class="container">
+    <h1>Spend Prestige Points</h1>
+
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=""></a>
+            <a class="navbar-brand btn btn-secondary" href="{% url 'game' %}">Back to Game</a>
+            <a class="navbar-brand" href=""></a>
+        </div>
+    </div>
+    <nav class="navbar navbar-light sticky-top bg-light">
+        <div class="container-fluid">
+            <span class="navbar-text">Playing as: {{ a.user.username }}</span>
+            <span class="navbar-text">Base Bonus: X{{ a.prestigeBonus }}</span>
+            <span class="navbar-text">Prestige Points: {{ a.prestige }}</span>
+        </div>
+    </nav>
+
+    <br>
+    <table class="table">
+        <tbody>
+            <tr class="table-primary">
+                <td>Reduce the cost of all companies by 10%</td>
+                <td>Owned: {{ a.pallcost }}</td>
+                <td>Cost: 1000</td>
+                {% if a.pallcost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=10 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of all companies by 10%</td>
+                <td>Owned: {{ a.pallpay }}</td>
+                <td>Cost: 1000</td>
+                <td><a href="{% url 'prestigeButton' ID=20 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Taco Bell by 10%</td>
+                <td>Owned: {{ a.pcomp1cost }}</td>
+                <td>Cost: 80</td>
+                {% if a.pcomp1cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=11 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Taco Bell by 10%</td>
+                <td>Owned: {{ a.pcomp1pay }}</td>
+                <td>Cost: 80</td>
+                <td><a href="{% url 'prestigeButton' ID=21 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Chik-fil-A by 10%</td>
+                <td>Owned: {{ a.pcomp2cost }}</td>
+                <td>Cost: 160</td>
+                {% if a.pcomp2cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=12 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Chik-fil-A by 10%</td>
+                <td>Owned: {{ a.pcomp2pay }}</td>
+                <td>Cost: 160</td>
+                <td><a href="{% url 'prestigeButton' ID=22 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Pizza Hut by 10%</td>
+                <td>Owned: {{ a.pcomp3cost }}</td>
+                <td>Cost: 320</td>
+                {% if a.pcomp3cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=13 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Pizza Hut by 10%</td>
+                <td>Owned: {{ a.pcomp3pay }}</td>
+                <td>Cost: 320</td>
+                <td><a href="{% url 'prestigeButton' ID=23 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Arby's by 10%</td>
+                <td>Owned: {{ a.pcomp4cost }}</td>
+                <td>Cost: 640</td>
+                {% if a.pcomp4cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=14 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Arby's by 10%</td>
+                <td>Owned: {{ a.pcomp4pay }}</td>
+                <td>Cost: 640</td>
+                <td><a href="{% url 'prestigeButton' ID=24 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Dunkin' by 10%</td>
+                <td>Owned: {{ a.pcomp5cost }}</td>
+                <td>Cost: 1280</td>
+                {% if a.pcomp5cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=15 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Dunkin' by 10%</td>
+                <td>Owned: {{ a.pcomp5pay }}</td>
+                <td>Cost: 1280</td>
+                <td><a href="{% url 'prestigeButton' ID=25 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Cinnabon by 10%</td>
+                <td>Owned: {{ a.pcomp6cost }}</td>
+                <td>Cost: 2560</td>
+                {% if a.pcomp6cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=16 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Cinnabon by 10%</td>
+                <td>Owned: {{ a.pcomp6pay }}</td>
+                <td>Cost: 2560</td>
+                <td><a href="{% url 'prestigeButton' ID=26 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Wendy's by 10%</td>
+                <td>Owned: {{ a.pcomp7cost }}</td>
+                <td>Cost: 5120</td>
+                {% if a.pcomp7cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=17 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Wendy's by 10%</td>
+                <td>Owned: {{ a.pcomp7pay }}</td>
+                <td>Cost: 5120</td>
+                <td><a href="{% url 'prestigeButton' ID=27 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Krispy Kreme by 10%</td>
+                <td>Owned: {{ a.pcomp8cost }}</td>
+                <td>Cost: 10240</td>
+                {% if a.pcomp8cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=18 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Krispy Kreme by 10%</td>
+                <td>Owned: {{ a.pcomp8pay }}</td>
+                <td>Cost: 10240</td>
+                <td><a href="{% url 'prestigeButton' ID=28 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Baskin-Robins by 10%</td>
+                <td>Owned: {{ a.pcomp9cost }}</td>
+                <td>Cost: 20480</td>
+                {% if a.pcomp9cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=19 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Baskin-Robins by 10%</td>
+                <td>Owned: {{ a.pcomp9pay }}</td>
+                <td>Cost: 20480</td>
+                <td><a href="{% url 'prestigeButton' ID=29 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td>Reduce the cost of Dairy Queen by 10%</td>
+                <td>Owned: {{ a.pcomp10cost }}</td>
+                <td>Cost: 40960</td>
+                {% if a.pcomp10cost < 9 %}
+                <td><a href="{% url 'prestigeButton' ID=110 %}" class="btn btn-secondary">Buy</a></td>
+                {% else %}
+                <td><a href="#" class="btn btn-secondary">Maxed</a></td>
+                {% endif %}
+            </tr>
+            <tr class="table-info">
+                <td>Increase pay of Dairy Queen by 10%</td>
+                <td>Owned: {{ a.pcomp10pay }}</td>
+                <td>Cost: 40960</td>
+                <td><a href="{% url 'prestigeButton' ID=210 %}" class="btn btn-secondary">Buy</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

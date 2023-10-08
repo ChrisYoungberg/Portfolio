@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Company Game</title>
+{% endblock%}
+
+{% block body %}
+<div class="container">
+    <h1>Welcome!</h1>
+    <h3>Welcome to The Company Game, here is how to play.</h3>
+
+    <h4>Basics</h4>
+    <p>
+        You start with $1000. This money can be spent on 10 different companies all ranging in price and payout.
+        The more the company costs the more effiecient the cost will be compared to the payout. Rememer this that it
+        is worth it to buy the more expensive companies. Than once you have bought different companies you can see how much
+        money will be gained by going to the next day. This can be done by pressing on the next day button. 
+    </p>
+
+    <h4>Prestiging</h4>
+    <p>
+        This is a system that will reset your progress, but with a twist. This twist is that you will gain prestige points. 
+        These points will give you a .001 multiplier. This multiplier applies to both your starting amount of money and on 
+        your income for the day.
+    </p>
+
+    <h4>Spending Restige Points</h4>
+    <p>
+        Once you have clelect prestige points you can spend them on multipliers for everything or specific companies. However,
+        this will alter your base multipier from prestige points so keep that in mind.
+    </p>
+
+    <a class="btn btn-secondary" href="{% url 'game' %}">Play</a>
+</div>
+{% endblock %}

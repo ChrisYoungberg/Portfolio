@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Prestige?</title>
+{% endblock%}
+
+{% block body %}
+<div class="container">
+
+    <h1>Prestige?</h1>
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=""></a>
+            <a class="navbar-brand btn btn-secondary" href="{% url 'game' %}">Back to Game</a>
+            <a class="navbar-brand" href=""></a>
+        </div>
+    </div>
+    <nav class="navbar navbar-light sticky-top bg-light">
+        <div class="container-fluid">
+            <span class="navbar-text">Playing as: {{ a.user.username }}</span>
+            <span class="navbar-text">Money: ${{ a.money }}</span>
+            {% if a.prestigeBonus > .01 %}
+            <span class="navbar-text">Income for Day: ${{ a.incomeforday }} X{{ a.prestigeBonus }}</span>
+            {% else %}
+            <span class="navbar-text">Income for Day: ${{ a.incomeforday }}</span>
+            {% endif %}
+            <span class="navbar-text">Prestige Points: {{ a.prestige }}</span>
+        </div>
+    </nav>
+
+    <h3>Are you sure you want to prestige?</h3>
+    <a class="btn btn-danger" href="{% url 'prestige' %}">Yes</a>
+    <a class="btn btn-success" href="{% url 'game' %}">No</a>
+</div>
+{% endblock %}
