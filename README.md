@@ -10,7 +10,7 @@ Blabber App – A Twitter Remake
   
   -Key features include:
   
-    -User Authentication: Account creation, login, and session management.
+  -User Authentication: Account creation, login, and session management.
     
     -Post Creation and Management: Users can create, edit, and delete short posts (“blabs”).
     
@@ -27,16 +27,26 @@ Blabber App – A Twitter Remake
   -Through this project, I gained valuable experience in teamwork, version control, and full-stack development, while strengthening my understanding of software design patterns and web technologies.
 
 Company Game – Business Simulation App
-  Technologies: Python, Django
-  Type: Individual School Project
-  Company Game is a web-based simulation game where players purchase companies, progress through days, and generate revenue to expand their portfolios. Designed and fully developed by me using Python and Django, the project showcases both back-end logic and front-end integration to deliver a functional and engaging user experience.
-  Key features include:
-    Dynamic Progression System: Players can advance time, triggering revenue updates across owned companies.
-    Economy Simulation: Profit scaling and reinvestment mechanics encourage strategic growth.
-    Company Marketplace: Users can buy new companies as they accumulate wealth.
-    Database-Driven Design: Django models track companies, user accounts, and game states.
-    Scalable Architecture: Built to support expansion with additional company types and mechanics.
-  This project gave me hands-on experience with full-stack development in Django, including building models, views, and templates, while reinforcing my ability to handle both business logic and user-facing functionality.
+
+  -Technologies: Python, Django
+  
+  -Type: Individual School Project
+  
+  -Company Game is a web-based simulation game where players purchase companies, progress through days, and generate revenue to expand their portfolios. Designed and fully developed by me using Python and Django, the project showcases both back-end logic and front-end integration to deliver a functional and engaging user experience.
+  
+  -Key features include:
+  
+    -Dynamic Progression System: Players can advance time, triggering revenue updates across owned companies.
+    
+    -Economy Simulation: Profit scaling and reinvestment mechanics encourage strategic growth.
+    
+    -Company Marketplace: Users can buy new companies as they accumulate wealth.
+    
+    -Database-Driven Design: Django models track companies, user accounts, and game states.
+    
+    -Scalable Architecture: Built to support expansion with additional company types and mechanics.
+    
+  -This project gave me hands-on experience with full-stack development in Django, including building models, views, and templates, while reinforcing my ability to handle both business logic and user-facing functionality.
 
 Flight Assignment 
 - Programmed in C# .Net Framework 4.5.2 
