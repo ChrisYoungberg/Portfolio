@@ -30,7 +30,7 @@ Company Game – Business Simulation App
 
 -Technologies: Python, Django
   
--Type: Individual School Project
+-Type: Individual School Project (Weber State University)
   
 -Company Game is a web-based simulation game where players purchase companies, progress through days, and generate revenue to expand their portfolios. Designed and fully developed by me using Python and Django, the project showcases both back-end logic and front-end integration to deliver a functional and engaging user experience.
   
@@ -51,7 +51,7 @@ Company Game – Business Simulation App
 Flight Assignment 
 -Technologies: C#, .NET Framework 4.5.2
 
--Type: Group School Project
+-Type: Group School Project (Weber State University)
 
 -The Flight Assignment App is a desktop application designed to efficiently assign passengers to seats on flights. Developed as a group project using C# and .NET Framework 4.5.2.
 
