@@ -1,6 +1,7 @@
 # Portfolio
 
 Blabber App – A Twitter Remake
+
   -Technologies: C#, HTML, Razor Pages, SQL
   -Type: Group Project (Weber State University)
   -Blabber is a social media web application inspired by Twitter, designed to allow users to create, share, and interact with short text-based posts. Built as a group project during my Computer Science degree, Blabber demonstrates the ability to design and implement full-stack web applications using modern frameworks and database integration.
